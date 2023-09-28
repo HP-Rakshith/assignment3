@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .box img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .box p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .box.button {
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .box.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Types in HTML</h1>
+    <div class="container">
+        <div class="box">
+            <h2>String</h2>
+            <p id="stringid">Click Me!</p>
+        </div>
+        <div class="box">
+            <h2>Number</h2>
+            <p id="numberid">Click Me!</p>
+        </div>
+        <div class="box">
+            <h2>Boolean</h2>
+            <p id="booleanid">Click Me!</p>
+        </div>
+        <div class="box">
+            <h2>Array</h2>
+            <p id="arrayid">Click Me!</p>
+        </div>
+        <div class="box">
+            <h2>Object</h2>
+            <p id="objectid">Click Me!</p>
+        </div>
+        
+        <div class="box button" onclick="showAlert()">
+            <h2>Function</h2>
+            <p>Click Me!</p>
+        </div>
+    </div>
+    
+    <script>
+        var string="hello world";
+        document.getElementById("stringid").addEventListener("click",()=>{document.getElementById("stringid").textContent=string ;});
+        
+        var number=55;
+        document.getElementById("numberid").addEventListener("click",()=>{document.getElementById("numberid").textContent=number ;});
+
+        var array="0,1,2";
+        document.getElementById("arrayid").addEventListener("click",()=>{document.getElementById("arrayid").textContent=array;});
+        
+        var boolean=true;
+        document.getElementById("booleanid").addEventListener("click",()=>{document.getElementById("booleanid").textContent=boolean;});
+        
+        const object={"name": "John", "age": 30};
+        document.getElementById("objectid").addEventListener("click",()=>{document.getElementById("objectid").textContent=object.name +" "+ object.age ;});
+        
+
+        function showAlert() {
+            alert("You clicked the function box!");
+        }
+    </script>
+</body>
+</html>
